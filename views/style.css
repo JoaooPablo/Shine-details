@@ -1,0 +1,142 @@
+/* Variables de color */
+:root {
+    --background: hsl(210, 100%, 97%);
+    --foreground: hsl(339, 20%, 20%);
+    --primary: hsl(308, 56%, 85%);
+    --primary-foreground: hsl(210, 22%, 22%);
+    --secondary: hsl(196, 75%, 88%);
+    --secondary-foreground: hsl(210, 22%, 22%);
+    --accent: hsl(211, 86%, 70%);
+    --accent-foreground: hsl(210, 22%, 22%);
+    --border: hsl(210, 40%, 80%);
+    --radius: 1rem;
+  }
+  
+  /* Configuración básica */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header nav {
+    margin-top: 10px;
+  }
+  
+  header nav a {
+    color: var(--primary-foreground);
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: var(--accent);
+  }
+  
+  /* Contenedor principal */
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    width: 45%; /* 45% del contenedor */
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  /* Galería de imágenes */
+  .gallery {
+    width: 45%; /* 45% del contenedor */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 40px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Mantiene la proporción cuadrada */
+    object-fit: cover;
+    border-radius: 12px; /* Borde redondeado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  }
+  
